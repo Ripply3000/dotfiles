@@ -1,5 +1,5 @@
 # General
-import = ["~/.config/alacritty/themes/oxocarbon.toml"]
+import = ["~/.config/alacritty/themes/srcery.toml"]
 live_config_reload = true
 
 [env]
@@ -10,18 +10,41 @@ decorations = "Buttonless"
 startup_mode = "Maximized"
 #padding = { x = 5, y = 10 }
 dynamic_padding = false
-#opacity = 0.85
-#blur = true
+opacity = 0.5
+blur = true
 
 [font]
 size = 14
 
+#blexmono
+# [font.normal]
+# family = "BlexMono Nerd Font Mono"
+# style = "Light"
+#
+# [font.italic]
+# style = "Light"
+#
+# [font.bold]
+# style = "Medium"
+
+#Liga SF Mono
+# [font.normal]
+# family = "Liga SFMono Nerd Font"
+# style = "Light"
+#
+# [font.italic]
+# style = "LightItalic"
+#
+# [font.bold]
+# style = "Regular"
+
+# JetBrains
 [font.normal]
-family = "BlexMono Nerd Font Mono"
-style = "Light"
+family = "JetBrainsMono Nerd Font Propo"
+style = "Thin"
 
 [font.italic]
-style = "Italic"
+style = "ThinItalic"
 
 [font.bold]
 style = "Medium"

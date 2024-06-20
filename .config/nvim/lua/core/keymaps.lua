@@ -49,7 +49,10 @@ keymap.set("n", "<leader>lg", ":LazyGit<CR>")
 -- buffer navigation
 keymap.set("n", "<leader>bn", ":bnext<CR>")
 keymap.set("n", "<leader>bp", ":bprev<CR>")
-keymap.set("n", "<leader>bd", ":bd<CR>")
+keymap.set("n", "<leader>bd", ":bd!<CR>")
+
+-- oil nvim
+keymap.set("n", "-", "<CMD>Oil<CR>", {desc = "Open parent directory"})
 
 -- zen mode
 keymap.set("n", "<leader>zm", ":ZenMode<CR>")

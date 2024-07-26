@@ -1,13 +1,4 @@
 -- return {
---    'AlexvZyl/nordic.nvim',
---    lazy = false,
---    priority = 1000,
---    config = function()
---        require('nordic').load()
---    end
--- }
-
--- return {
 -- 	"ellisonleao/gruvbox.nvim",
 -- 	lazy = false,
 -- 	priority = 1000,
@@ -51,12 +42,31 @@
 --     end
 -- }
 
+-- return {
+--     "srcery-colors/srcery-vim",
+--     config = function()
+--         -- vim.g.srcery_bg_passthrough = 1
+--         vim.g.srcery_bg = {"None", "None"}
+--         vim.g.srcery_italic = 1
+--         vim.cmd.colorscheme("srcery")
+--     end,
+-- }
+
+-- return {
+--     'rebelot/kanagawa.nvim',
+--     config = function()
+--         -- require('kanagawa').setup({
+--             -- transparent = true
+--         -- })
+--         vim.cmd.colorscheme('kanagawa-wave')
+--     end,
+-- }
+
 return {
-    "srcery-colors/srcery-vim",
-    config = function()
-        -- vim.g.srcery_bg_passthrough = 1
-        vim.g.srcery_bg = {"None", "None"}
-        vim.g.srcery_italic = 1
-        vim.cmd.colorscheme("srcery")
-    end,
+   'AlexvZyl/nordic.nvim',
+   lazy = false,
+   priority = 1000,
+   config = function()
+       require('nordic').load()
+   end
 }

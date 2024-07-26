@@ -1,0 +1,127 @@
+/* Nordic Theme for Obsidian */
+
+/* Base Colors */
+:root {
+    --background-primary: #2e3440;
+    --background-secondary: #3b4252;
+    --background-tertiary: #434c5e;
+    --background-quaternary: #4c566a;
+
+    --foreground-primary: #d8dee9;
+    --foreground-secondary: #e5e9f0;
+    --foreground-tertiary: #eceff4;
+
+    --text-normal: #d8dee9;
+    --text-muted: #a3be8c;
+    --text-highlight: #88c0d0;
+
+    --accent-primary: #81a1c1;
+    --accent-secondary: #88c0d0;
+    --accent-tertiary: #5e81ac;
+
+    --border-primary: #4c566a;
+    --border-secondary: #3b4252;
+    --border-tertiary: #2e3440;
+}
+
+/* General Styling */
+body {
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--foreground-primary);
+}
+
+/* Links */
+a {
+    color: var(--accent-primary);
+}
+
+a:hover {
+    color: var(--accent-secondary);
+}
+
+/* Code blocks */
+code, pre {
+    background-color: var(--background-secondary);
+    color: var(--foreground-secondary);
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid var(--accent-tertiary);
+    background-color: var(--background-tertiary);
+    padding: 0.5em 1em;
+    color: var(--foreground-secondary);
+}
+
+/* Lists */
+ul, ol {
+    color: var(--foreground-primary);
+}
+
+ul li::marker, ol li::marker {
+    color: var(--accent-tertiary);
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+table, th, td {
+    border: 1px solid var(--border-primary);
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: left;
+    color: var(--foreground-primary);
+}
+
+/* Buttons */
+button {
+    background-color: var(--accent-primary);
+    color: var(--text-normal);
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--accent-secondary);
+}
+
+/* Input Fields */
+input, textarea {
+    background-color: var(--background-secondary);
+    color: var(--foreground-primary);
+    border: 1px solid var(--border-primary);
+    padding: 0.5em;
+}
+
+/* Selection */
+::selection {
+    background-color: var(--accent-primary);
+    color: var(--text-normal);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-primary);
+    border-radius: 10px;
+    border: 3px solid var(--background-primary);
+}

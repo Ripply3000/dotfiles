@@ -56,3 +56,10 @@ keymap.set("n", "-", "<CMD>Oil<CR>", {desc = "Open parent directory"})
 
 -- zen mode
 keymap.set("n", "<leader>zm", ":ZenMode<CR>")
+
+-- obsidian
+keymap.set("n", "<leader>no", ":ObsidianOpen<CR>") -- open note in obsidian
+keymap.set("n", "<leader>nv", ":ObsidianFollowLink vsplit<CR>")
+keymap.set("n", "<leader>nh", ":ObsidianFollowLink hsplit<CR>")
+keymap.set("n", "<leader>nd", ":ObsidianDailies<CR>")
+keymap.set("n", "<leader>nt", ":ObsidianTemplate<CR>")

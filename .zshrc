@@ -62,7 +62,7 @@ alias ls='ls --color'
 alias work="cd ~/work"
 alias scripts="cd ~/dotfiles/shell-scripts/"
 alias dotfiles="cd ~/dotfiles/"
-alias obted="cd /Users/ripply/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Tedmob/"
+alias rz="cd /Users/ripply/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Ripply\ Zettelkasten/"
 
 # Command Shortcuts
 alias v="nvim"

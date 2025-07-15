@@ -1,0 +1,4 @@
+vim.schedule(function()
+  vim.api.nvim_set_hl(0, "@text.strong", { fg = "#FFD700", bold = true })
+  vim.api.nvim_set_hl(0, "@text.emphasis", { fg = "#00FFFF", italic = true })
+end)

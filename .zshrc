@@ -53,6 +53,7 @@ alias rz="cd /Users/ripply/Library/Mobile\ Documents/iCloud~md~obsidian/Document
 # Command Shortcuts
 alias v="nvim"
 alias lg="lazygit"
+alias k="kubectl"
 
 # Shell integrations
 eval "$(fzf --zsh)"

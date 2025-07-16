@@ -14,8 +14,8 @@ keymap.set("n", "x", '"_x"')
 keymap.set("n", "<leader>+", "<C-a>")          -- increments numbers
 keymap.set("n", "<leader>-", "<C-x>")          -- decrements numbers
 
-keymap.set("n", "<leader>sv", "<C-w>v")        -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s")        -- split window horizontally
+keymap.set("n", "<leader>s|", "<C-w>v")        -- split window vertically
+keymap.set("n", "<leader>s-", "<C-w>s")        -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=")        -- make split windows equal width
 keymap.set("n", "<leader>sx", ":close<CR>")    -- close current split window
 
@@ -39,12 +39,11 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 -- lazygit
 keymap.set("n", "<leader>lg", ":LazyGit<CR>")
 
--- This section was moved to telescope.lua
---keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
---keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
---keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
---keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
---keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>") -- find files within current working directory, respects .gitignore
+keymap.set("n", "<leader>fs", "<cmd>FzfLua live_grep<cr>") -- find string in current working directory as you type
+keymap.set("n", "<leader>fr", "<cmd>FzfLua registers<cr>") -- find string under cursor in current working directory
+keymap.set("n", "<leader>fb", "<cmd>FzfLua buffers<cr>") -- list open buffers in current neovim instance
+keymap.set("n", "<leader>fh", "<cmd>FzfLua helptags<cr>") -- list available help tags
 
 -- buffer navigation
 keymap.set("n", "<leader>bn", ":bnext<CR>")
@@ -59,7 +58,7 @@ keymap.set("n", "<leader>zm", ":ZenMode<CR>")
 
 -- obsidian
 keymap.set("n", "<leader>no", ":ObsidianOpen<CR>") -- open note in obsidian
-keymap.set("n", "<leader>nv", ":ObsidianFollowLink vsplit<CR>")
-keymap.set("n", "<leader>nh", ":ObsidianFollowLink hsplit<CR>")
+keymap.set("n", "<leader>n|", ":ObsidianFollowLink vsplit<CR>")
+keymap.set("n", "<leader>n-", ":ObsidianFollowLink hsplit<CR>")
 keymap.set("n", "<leader>nd", ":ObsidianDailies<CR>")
 keymap.set("n", "<leader>nt", ":ObsidianTemplate<CR>")

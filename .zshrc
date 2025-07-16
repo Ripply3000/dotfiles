@@ -28,9 +28,6 @@ zinit light Aloxaf/fzf-tab
 #
 # zinit cdreplay -q
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -70,5 +67,7 @@ alias lg="lazygit"
 
 # Shell integrations
 eval "$(fzf --zsh)"
+
+eval "$(starship init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

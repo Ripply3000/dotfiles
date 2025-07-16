@@ -60,5 +60,5 @@ keymap.set("n", "<leader>zm", ":ZenMode<CR>")
 keymap.set("n", "<leader>no", ":ObsidianOpen<CR>") -- open note in obsidian
 keymap.set("n", "<leader>n|", ":ObsidianFollowLink vsplit<CR>")
 keymap.set("n", "<leader>n-", ":ObsidianFollowLink hsplit<CR>")
-keymap.set("n", "<leader>nd", ":ObsidianDailies<CR>")
+keymap.set("n", "<leader>nd", ":ObsidianDailies -30 5<CR>")
 keymap.set("n", "<leader>nt", ":ObsidianTemplate<CR>")

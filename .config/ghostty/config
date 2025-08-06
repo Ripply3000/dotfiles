@@ -1,17 +1,17 @@
 #========#
 # window #
 #========#
-background-blur = 20
-background-opacity = 0.9
+background-blur = 0
+background-opacity = 0.75
 macos-titlebar-style = hidden
 mouse-hide-while-typing = true
 
 #=======#
 # theme #
 #=======#
-theme = "/Users/ripply/.config/ghostty/themes/nordic"
-#theme = carbonfox
-#theme = GruvboxDarkHard
+# theme = "/Users/ripply/.config/ghostty/themes/nordic"
+theme = carbonfox
+# theme = GruvboxDarkHard
 #theme = nordfox
 
 #======#
@@ -20,7 +20,8 @@ theme = "/Users/ripply/.config/ghostty/themes/nordic"
 
 font-size = 14
 font-thicken = false
-font-family = "JetBrainsMono Nerd Font"
+# font-family = "JetBrainsMono Nerd Font"
+font-family = "JetBrainsMono Nerd Font Propo"
 bold-is-bright = true
 #font-style = "JetBrainsMono Nerd Font"
 #font-family = "JetBrainsMonoNL NFM Regular"
@@ -31,9 +32,9 @@ bold-is-bright = true
 #=========#
 # shaders #
 #=========#
-#custom-shader = shaders/shader-playgroud/cursor_blaze_no_trail.glsl
-#custom-shader = shaders/shader-playgroud/cursor_smear_fade.glsl
+# custom-shader = shaders/better-crt.glsl
+# custom-shader = shaders/shader-playgroud/cursor_blaze_no_trail.glsl
+# custom-shader = shaders/shader-playgroud/cursor_smear_fade.glsl
 #custom-shader = shaders/m-ahdal/in-game-crt.glsl
-#custom-shader = shaders/m-ahdal/better-crt.glsl
 #custom-shader = shaders/m-ahdal/water.glsl
 #custom-shader = shaders/m-ahdal/better-spotlight.glsl

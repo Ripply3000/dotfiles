@@ -59,7 +59,7 @@ alias k="kubectl"
 
 # Shell integrations
 eval "$(fzf --zsh)"
-
+eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

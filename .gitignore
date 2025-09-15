@@ -10,3 +10,11 @@
 .config/raycast
 .config/thefuck
 .config/btop
+.config/argocd
+.config/configstore
+.config/filezilla
+.config/filezilla-server-gui
+.config/gcloud
+.config/kitty
+.config/lazygit
+.config/neofetch

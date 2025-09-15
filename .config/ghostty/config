@@ -1,8 +1,10 @@
+# Test
+term=tmux-256color
 #========#
 # window #
 #========#
-background-blur = 0
-background-opacity = 0.75
+background-blur = 10
+background-opacity = 0.7
 macos-titlebar-style = hidden
 mouse-hide-while-typing = true
 
@@ -33,8 +35,9 @@ bold-is-bright = true
 # shaders #
 #=========#
 # custom-shader = shaders/better-crt.glsl
-# custom-shader = shaders/shader-playgroud/cursor_blaze_no_trail.glsl
-# custom-shader = shaders/shader-playgroud/cursor_smear_fade.glsl
+# custom-shader = shaders/cursor_blaze_no_trail.glsl
+# custom-shader = shaders/cursor_blaze_no_trail.glsl
+# custom-shader = shaders/cursor_smear_fade.glsl
 #custom-shader = shaders/m-ahdal/in-game-crt.glsl
 #custom-shader = shaders/m-ahdal/water.glsl
 #custom-shader = shaders/m-ahdal/better-spotlight.glsl

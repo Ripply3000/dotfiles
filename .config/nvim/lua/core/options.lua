@@ -25,6 +25,11 @@ opt.cursorline = false
 
 -- appearance
 opt.termguicolors = true
+-- opt.pumblend = 20 -- transparency for popup menu only
+-- opt.winblend = 10 -- transparency for all other floating windows
+
+opt.winborder = "single"
+
 --opt.background = "dark"
 opt.signcolumn = "yes"
 
@@ -46,3 +51,7 @@ opt.mouse = "a"
 -- disable motion skip for - and _
 opt.iskeyword:remove("-")
 opt.iskeyword:remove("_")
+
+opt.winborder = "rounded"
+
+vim.opt.conceallevel = 2

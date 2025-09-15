@@ -11,13 +11,13 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- in normal mode, x deletes a single character without copying it into the registry
 keymap.set("n", "x", '"_x"')
-keymap.set("n", "<leader>+", "<C-a>")          -- increments numbers
-keymap.set("n", "<leader>-", "<C-x>")          -- decrements numbers
+keymap.set("n", "<leader>+", "<C-a>") -- increments numbers
+keymap.set("n", "<leader>-", "<C-x>") -- decrements numbers
 
-keymap.set("n", "<leader>s|", "<C-w>v")        -- split window vertically
-keymap.set("n", "<leader>s-", "<C-w>s")        -- split window horizontally
-keymap.set("n", "<leader>se", "<C-w>=")        -- make split windows equal width
-keymap.set("n", "<leader>sx", ":close<CR>")    -- close current split window
+keymap.set("n", "<leader>s|", "<C-w>v") -- split window vertically
+keymap.set("n", "<leader>s-", "<C-w>s") -- split window horizontally
+keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width
+keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
 -- tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>")
@@ -37,13 +37,28 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- lazygit
-keymap.set("n", "<leader>lg", ":LazyGit<CR>")
+-- keymap.set("n", "<leader>lg", ":LazyGit<CR>")
 
-keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>") -- find files within current working directory, respects .gitignore
-keymap.set("n", "<leader>fs", "<cmd>FzfLua live_grep<cr>") -- find string in current working directory as you type
-keymap.set("n", "<leader>fr", "<cmd>FzfLua registers<cr>") -- find string under cursor in current working directory
-keymap.set("n", "<leader>fb", "<cmd>FzfLua buffers<cr>") -- list open buffers in current neovim instance
-keymap.set("n", "<leader>fh", "<cmd>FzfLua helptags<cr>") -- list available help tags
+-- fzf-lua
+-- keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>") -- find files within current working directory, respects .gitignore
+-- keymap.set("n", "<leader>fs", "<cmd>FzfLua live_grep<cr>") -- find string in current working directory as you type
+-- keymap.set("n", "<leader>fr", "<cmd>FzfLua registers<cr>") -- find string under cursor in current working directory
+-- keymap.set("n", "<leader>fb", "<cmd>FzfLua buffers<cr>") -- list open buffers in current neovim instance
+-- keymap.set("n", "<leader>fh", "<cmd>FzfLua helptags<cr>") -- list available help tags
+-- keymap.set("n", "<leader>ft", "<cmd>FzfLua treesitter<cr>") -- list available help tags
+-- keymap.set("n", "<leader>ca", "<cmd>FzfLua lsp_code_actions previewer=codeaction_native<cr>") -- list available help tags
+keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {}) -- list available help tags
+
+-- keymap.set("n", "<leader>ca", function() require("tiny-code-action").code_action() end, { noremap = true, silent = true , desc = "test"})
+
+-- keymap.set({ "n", "x" }, "<leader>ca", function()
+-- 	require("tiny-code-action").code_action()
+-- end, { noremap = true, silent = true, desc = "tiny Code Action" })
+
+-- keymap.set("n", "<leader>ca", function()
+
+-- 	require("tiny-code-action").code_action()
+-- end, { noremap = true, silent = true })
 
 -- buffer navigation
 keymap.set("n", "<leader>bn", ":bnext<CR>")
@@ -51,7 +66,7 @@ keymap.set("n", "<leader>bp", ":bprev<CR>")
 keymap.set("n", "<leader>bd", ":bd!<CR>")
 
 -- oil nvim
-keymap.set("n", "-", "<CMD>Oil<CR>", {desc = "Open parent directory"})
+keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- zen mode
 keymap.set("n", "<leader>zm", ":ZenMode<CR>")

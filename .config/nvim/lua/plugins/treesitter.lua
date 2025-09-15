@@ -23,6 +23,7 @@ return {
                     --"php_only",
                     "phpdoc",
                     "dockerfile",
+                    "blade",
                     -- "markdown",
                     --"markdown_inline"
                 },

@@ -31,6 +31,14 @@ bold-is-bright = true
 #font-family-italic = "JetBrainsMono NFM Italic"
 #font-family-bold-italic = "JetBrainsMono NFM SemiBold Italic"
 
+# quick-terminal-position = "bottom"
+# quick-terminal-size = 50%
+
+#==============#
+# Key Bindings #
+#==============#
+keybind = global:ctrl+shift+g=toggle_quick_terminal
+
 #=========#
 # shaders #
 #=========#

@@ -1,9 +1,11 @@
-#  Place a copy of this config to ~/.aerospace.toml
+# Place a copy of this config to ~/.aerospace.toml
 # After that, you can edit ~/.aerospace.toml to your liking
 
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+after-startup-command = [
+  'exec-and-forget borders active_color=0xff77a9ff inactive_color=0xff494d64 width=2.5'
+]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -112,15 +114,17 @@ automatically-unhide-macos-hidden-apps = false
     alt-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    alt-1 = 'workspace 1'
-    alt-2 = 'workspace 2'
-    alt-3 = 'workspace 3'
-    alt-4 = 'workspace 4'
+    alt-1 = 'workspace 1' # temp 
+    alt-2 = 'workspace 2' # temp
+    alt-3 = 'workspace 3' # temp
+    alt-4 = 'workspace 4' # temp
     alt-b = 'workspace B' # Browsers
     alt-c = 'workspace C' # Communications
     alt-d = 'workspace D' # Development
     alt-g = 'workspace G' # Ghostty
-    alt-o = 'workspace O' # Obsidian
+    alt-o = 'workspace O' # Notes: Obsidian & Notion
+    alt-v = 'workspace V' # Visual Studio Code
+    alt-m = 'workspace M' # Music
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
@@ -132,6 +136,8 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-d = 'move-node-to-workspace D'
     alt-shift-g = 'move-node-to-workspace G'
     alt-shift-o = 'move-node-to-workspace O'
+    alt-shift-v = 'move-node-to-workspace V'
+    alt-shift-m = 'move-node-to-workspace M'
 
     alt-shift-f = 'fullscreen'
 
@@ -160,9 +166,9 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
 
-    down = 'volume down'
-    up = 'volume up'
-    shift-down = ['volume set 0', 'mode main']
+    # down = 'volume down'
+    # up = 'volume up'
+    # shift-down = ['volume set 0', 'mode main']
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.Outlook'                           
@@ -208,6 +214,10 @@ run = "move-node-to-workspace D"
 if.app-id = 'com.tinyspeck.slackmacgap'                       
 run = "move-node-to-workspace C"
 
+[[on-window-detected]]
+if.app-id = 'com.apple.Music'                       
+run = "move-node-to-workspace M"
+
 # TODO
 [mode.open.binding]
     esc = 'mode main'
@@ -218,5 +228,7 @@ run = "move-node-to-workspace C"
     c = ['exec-and-forget open -a "ChatGPT"', 'mode main']
     s = ['exec-and-forget open -a "Slack"', 'mode main']
     d = ['exec-and-forget open -a "DataGrip"', 'mode main']
+    o = ['exec-and-forget open -a "Obsidian"', 'mode main']
     p = ['exec-and-forget open -a "Postman"', 'mode main']
+    m = ['exec-and-forget open -a "Music"', 'mode main']
     alt-d = ['exec-and-forget open -a "Docker Desktop"', 'mode main']

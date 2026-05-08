@@ -25,10 +25,14 @@ keymap.set("n", "<leader>tx", ":tabclose<CR>")
 keymap.set("n", "<leader>tn", ":tabn<CR>")
 keymap.set("n", "<leader>tp", ":tabp<CR>")
 
+-- quickfix
+keymap.set("n", "<leader>cn", ":cnext<CR>")
+keymap.set("n", "<leader>cp", ":cprev<CR>")
+
 -- always keep the cursor centered
-keymap.set("n", "j", "jzz")
-keymap.set("n", "k", "kzz")
-keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "j", "gj")
+keymap.set("n", "k", "gk")
+-- keymap.set("n", "<C-d>", "<C-d>zz")
 
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
@@ -36,29 +40,7 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
--- lazygit
--- keymap.set("n", "<leader>lg", ":LazyGit<CR>")
-
--- fzf-lua
--- keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>") -- find files within current working directory, respects .gitignore
--- keymap.set("n", "<leader>fs", "<cmd>FzfLua live_grep<cr>") -- find string in current working directory as you type
--- keymap.set("n", "<leader>fr", "<cmd>FzfLua registers<cr>") -- find string under cursor in current working directory
--- keymap.set("n", "<leader>fb", "<cmd>FzfLua buffers<cr>") -- list open buffers in current neovim instance
--- keymap.set("n", "<leader>fh", "<cmd>FzfLua helptags<cr>") -- list available help tags
--- keymap.set("n", "<leader>ft", "<cmd>FzfLua treesitter<cr>") -- list available help tags
--- keymap.set("n", "<leader>ca", "<cmd>FzfLua lsp_code_actions previewer=codeaction_native<cr>") -- list available help tags
 keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {}) -- list available help tags
-
--- keymap.set("n", "<leader>ca", function() require("tiny-code-action").code_action() end, { noremap = true, silent = true , desc = "test"})
-
--- keymap.set({ "n", "x" }, "<leader>ca", function()
--- 	require("tiny-code-action").code_action()
--- end, { noremap = true, silent = true, desc = "tiny Code Action" })
-
--- keymap.set("n", "<leader>ca", function()
-
--- 	require("tiny-code-action").code_action()
--- end, { noremap = true, silent = true })
 
 -- buffer navigation
 keymap.set("n", "<leader>bn", ":bnext<CR>")
@@ -68,12 +50,17 @@ keymap.set("n", "<leader>bd", ":bd!<CR>")
 -- oil nvim
 keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
--- zen mode
-keymap.set("n", "<leader>zm", ":ZenMode<CR>")
-
 -- obsidian
 keymap.set("n", "<leader>no", ":ObsidianOpen<CR>") -- open note in obsidian
 keymap.set("n", "<leader>n|", ":ObsidianFollowLink vsplit<CR>")
 keymap.set("n", "<leader>n-", ":ObsidianFollowLink hsplit<CR>")
-keymap.set("n", "<leader>nd", ":ObsidianDailies -30 5<CR>")
-keymap.set("n", "<leader>nt", ":ObsidianTemplate<CR>")
+keymap.set("n", "<leader>nd", ":Obsidian dailies -30 5<CR>")
+keymap.set("n", "<leader>nt", ":Obsidian new_from_template<CR>")
+
+keymap.set({"n", "v"}, "<leader>cgn", function()
+    vim.api.nvim_feedkeys(
+        vim.api.nvim_replace_termcodes("*Ncgn", true, false, true),
+        "n",
+        false
+    )
+end)

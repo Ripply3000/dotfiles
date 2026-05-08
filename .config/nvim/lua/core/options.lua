@@ -54,4 +54,9 @@ opt.iskeyword:remove("_")
 
 opt.winborder = "rounded"
 
-vim.opt.conceallevel = 2
+opt.conceallevel = 2
+
+opt.scrolloff = 25
+
+-- specifies patterns to ignore when expanding wildcards (like **/*.php)
+opt.wildignore:append('vendor/**,node_modules/**,.git/**')

@@ -37,3 +37,6 @@ require("plugins.opencode")
 require("plugins.obsidian-new")
 
 require("plugins.colorscheme.ayu")
+
+-- FUN
+-- require("plugins.smear_cursor")

@@ -27,6 +27,7 @@ require("plugins.vim-table-mode")
 
 require("plugins.trouble")
 require("plugins.treesitter")
+require("plugins.quicker")
 
 require("plugins.bullets")
 require("plugins.snacks")

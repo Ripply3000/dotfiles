@@ -28,6 +28,7 @@ require("plugins.fugitive")
 require("plugins.vim-table-mode")
 
 require("plugins.trouble")
+require("plugins.none-ls")
 require("plugins.treesitter")
 require("plugins.quicker")
 

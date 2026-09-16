@@ -25,11 +25,18 @@ require('nvim-treesitter').install {
         "phpdoc",
         "dockerfile",
         "blade",
+        "c_sharp"
     -- },
     -- sync_install = true,
     -- highlight = { enable = true },
     -- indent = { enable = true },
 }
+
+vim.api.nvim_create_autocmd("FileType", {
+    callback = function()
+        pcall(vim.treesitter.start)
+    end,
+})
 
 -- require("nvim-treesitter.configs").setup({
 --     ensure_installed = {
@@ -56,6 +63,7 @@ require('nvim-treesitter').install {
 --     highlight = { enable = true },
 --     indent = { enable = true },
 -- })
+
 vim.api.nvim_create_autocmd('FileType', { 
     callback = function() 
         -- Enable treesitter highlighting and disable regex syntax

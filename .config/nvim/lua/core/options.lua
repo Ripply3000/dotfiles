@@ -60,3 +60,5 @@ opt.scrolloff = 25
 
 -- specifies patterns to ignore when expanding wildcards (like **/*.php)
 opt.wildignore:append('vendor/**,node_modules/**,.git/**')
+
+opt.autocomplete = false

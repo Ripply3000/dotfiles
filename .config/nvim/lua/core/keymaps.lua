@@ -26,29 +26,22 @@ keymap.set("n", "<leader>tn", ":tabn<CR>")
 keymap.set("n", "<leader>tp", ":tabp<CR>")
 
 -- quickfix
+keymap.set("n", "<leader>cc", ":cclose<CR>")
 keymap.set("n", "<leader>cn", ":cnext<CR>")
 keymap.set("n", "<leader>cp", ":cprev<CR>")
 
 -- always keep the cursor centered
 keymap.set("n", "j", "gj")
 keymap.set("n", "k", "gk")
--- keymap.set("n", "<C-d>", "<C-d>zz")
 
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
--- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
-
-keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {}) -- list available help tags
-
--- buffer navigation
+-- buffers
 keymap.set("n", "<leader>bn", ":bnext<CR>")
 keymap.set("n", "<leader>bp", ":bprev<CR>")
 keymap.set("n", "<leader>bd", ":bd!<CR>")
-
--- oil nvim
-keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+keymap.set("n", "<leader>bfd", ":bufdo bd<CR>")
 
 -- obsidian
 keymap.set("n", "<leader>no", ":ObsidianOpen<CR>") -- open note in obsidian
@@ -64,3 +57,10 @@ keymap.set({"n", "v"}, "<leader>cgn", function()
         false
     )
 end)
+
+-- Change <A-j> to <M-j> and <A-k> to <M-k>
+vim.keymap.set('n', '<M-j>', ':m .+1<CR>==', { desc = 'Move line down' })
+vim.keymap.set('n', '<M-k>', ':m .-2<CR>==', { desc = 'Move line up' })
+
+vim.keymap.set('v', '<M-j>', ":m '>+1<CR>gv=gv", { desc = 'Move selection down' })
+vim.keymap.set('v', '<M-k>', ":m '<-2<CR>gv=gv", { desc = 'Move selection up' })
